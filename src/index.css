@@ -1,0 +1,22 @@
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+li {
+	opacity: 1;
+	transform: translateX(-100%);
+}
+
+.animated {
+	transform-origin: left;
+	animation: fadeIn 300ms ease forwards;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}

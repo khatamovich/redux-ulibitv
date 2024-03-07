@@ -67,7 +67,7 @@ export default function App() {
 								customer: customer.name,
 								transactionMadeOn: new Date(),
 							});
-						}, 500);
+						}, 100);
 					}}
 				>
 					<input value={addAmount} onChange={(e) => setAddAmount(e.target.value)} />
@@ -88,7 +88,7 @@ export default function App() {
 								customer: customer.name,
 								transactionMadeOn: new Date(),
 							});
-						}, 500);
+						}, 100);
 					}}
 				>
 					<input value={getAmount} onChange={(e) => setGetAmount(e.target.value)} />
@@ -111,7 +111,7 @@ export default function App() {
 				{customer.transactions.length > 0 ? (
 					<ul>
 						{customer.transactions.map((transaction) => (
-							<li key={transaction.id}>
+							<li className="animated" key={transaction.id}>
 								<p>Customer: {transaction.customer}</p>
 								<p>Received: ${transaction.cashRecevied}.00</p>
 								<p>Transfered: ${transaction.cashTransfered}.00</p>
