@@ -12,7 +12,7 @@ export default function App() {
 	const [getAmount, setGetAmount] = useState("");
 
 	const addTransaction = (transaction) => {
-		if (isLoggedIn === false) return alert("You should login before performing any operations");
+		if (!isLoggedIn) return;
 
 		dispatcher({
 			type: "ADD TRANSACTION",
@@ -67,7 +67,7 @@ export default function App() {
 								customer: customer.name,
 								transactionMadeOn: new Date(),
 							});
-						}, 1000);
+						}, 500);
 					}}
 				>
 					<input value={addAmount} onChange={(e) => setAddAmount(e.target.value)} />
@@ -88,7 +88,7 @@ export default function App() {
 								customer: customer.name,
 								transactionMadeOn: new Date(),
 							});
-						}, 1000);
+						}, 500);
 					}}
 				>
 					<input value={getAmount} onChange={(e) => setGetAmount(e.target.value)} />
